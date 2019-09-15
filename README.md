@@ -2,7 +2,7 @@
 
 <H2> Progress Reports </H2>
 
-<ul>
+<ol>
   <li>Progress Report One (9/15/2019)
     <ul>
       <li> Briefly describe your project. (About 2 sentences.) </li>
@@ -18,4 +18,4 @@
     </ul>
   </li>
 
-</ul>
+</ol>

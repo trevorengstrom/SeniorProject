@@ -17,5 +17,20 @@
         <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
     </ul>
   </li>
+  
+   <li>Progress Report One (9/29/2019)
+    <ul>
+      <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li> </li></ul>
+      <li> What is your particular role in the project?</li>
+        <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
+      <li> What have you done personally in the two weeks leading up to today?</li>
+        <ul><li> </li></ul>
+      <li> Describe any significant progress made by the team as a whole in this time period.</li>
+        <ul><li> </li></ul>
+      <li> Give a link to the journal file in your repository</li>      
+        <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
+    </ul>
+  </li>
 
 </ol>

@@ -18,7 +18,82 @@
     </ul>
   </li>
   
-   <li>Progress Report One (9/29/2019)
+   <li>Progress Report Two (9/29/2019)
+    <ul>
+      <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li>My project is a web site for a truck dealership in Fort Myers, Florida. The website will feature current inventory, contact information, and general financing information. The website will also feature a log in for the dealership so they can log in and update their inventory. </li></ul>
+      <li> What is your particular role in the project?</li>
+        <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
+      <li> What have you done personally in the two weeks leading up to today?</li>
+        <ul><li> During the past two weeks I started the actual build of the project. Through Visual Studio I created a new MVC 5 project and established a log-in for the client. I set up the basis for a landing page, an 'About us' page, and a contact page. I also set up the log-in page. I continued to learned more about Vue JS and its viability with this project. Im still working on finding the best way to store many images in a SQL Server database. </li></ul>
+      <li> Describe any significant progress made by the team as a whole in this time period.</li>
+        <ul><li> Creating the bones of the project and continued research. </li></ul>
+      <li> Give a link to the journal file in your repository</li>      
+        <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
+    </ul>
+  </li>
+  
+     <li>Progress Report Three (10/13/2019)
+    <ul>
+      <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li> </li></ul>
+      <li> What is your particular role in the project?</li>
+        <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
+      <li> What have you done personally in the two weeks leading up to today?</li>
+        <ul><li> </li></ul>
+      <li> Describe any significant progress made by the team as a whole in this time period.</li>
+        <ul><li> </li></ul>
+      <li> Give a link to the journal file in your repository</li>      
+        <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
+    </ul>
+  </li>
+  
+     <li>Progress Report Four (10/27/2019)
+    <ul>
+      <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li> </li></ul>
+      <li> What is your particular role in the project?</li>
+        <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
+      <li> What have you done personally in the two weeks leading up to today?</li>
+        <ul><li> </li></ul>
+      <li> Describe any significant progress made by the team as a whole in this time period.</li>
+        <ul><li> </li></ul>
+      <li> Give a link to the journal file in your repository</li>      
+        <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
+    </ul>
+  </li>
+  
+     <li>Progress Report Five (11/10/2019)
+    <ul>
+      <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li> </li></ul>
+      <li> What is your particular role in the project?</li>
+        <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
+      <li> What have you done personally in the two weeks leading up to today?</li>
+        <ul><li> </li></ul>
+      <li> Describe any significant progress made by the team as a whole in this time period.</li>
+        <ul><li> </li></ul>
+      <li> Give a link to the journal file in your repository</li>      
+        <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
+    </ul>
+  </li>
+  
+     <li>Progress Report Six (11/24/2019)
+    <ul>
+      <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li> </li></ul>
+      <li> What is your particular role in the project?</li>
+        <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
+      <li> What have you done personally in the two weeks leading up to today?</li>
+        <ul><li> </li></ul>
+      <li> Describe any significant progress made by the team as a whole in this time period.</li>
+        <ul><li> </li></ul>
+      <li> Give a link to the journal file in your repository</li>      
+        <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
+    </ul>
+  </li>
+  
+     <li>Progress Report Seven (12/8/2019)
     <ul>
       <li> Briefly describe your project. (About 2 sentences.) </li>
         <ul><li> </li></ul>

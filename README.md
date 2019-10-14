@@ -36,13 +36,13 @@
      <li>Progress Report Three (10/13/2019)
     <ul>
       <li> Briefly describe your project. (About 2 sentences.) </li>
-        <ul><li> </li></ul>
+         <ul><li>My project is a web site for a truck dealership in Fort Myers, Florida. The website will feature current inventory, contact information, and general financing information. The website will also feature a log in for the dealership so they can log in and update their inventory. </li></ul>
       <li> What is your particular role in the project?</li>
         <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
       <li> What have you done personally in the two weeks leading up to today?</li>
-        <ul><li> </li></ul>
+        <ul><li> These past two weeks were research and discussion heavy. I consulted several professional and experienced web developers and asked them for their suggestions and advice as how best to implement the dashboard, photo galleries, photo uploads, and database implementation for the photos. I began work on the front end of the website to outline the basics of where everything will go for the first draft. I contacted the customer and asked for the needed data and pictures to begin populating the database. </li></ul>
       <li> Describe any significant progress made by the team as a whole in this time period.</li>
-        <ul><li> </li></ul>
+        <ul><li> See above. </li></ul>
       <li> Give a link to the journal file in your repository</li>      
         <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
     </ul>

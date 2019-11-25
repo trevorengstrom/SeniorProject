@@ -80,14 +80,14 @@
   
      <li>Progress Report Six (11/24/2019)
     <ul>
-      <li> Briefly describe your project. (About 2 sentences.) </li>
-        <ul><li> </li></ul>
+        <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li>My project is a web site for a truck dealership in Fort Myers, Florida. The website will feature current inventory, contact information, and general financing information. The website will also feature a log in for the dealership so they can log in and update their inventory. </li></ul>
       <li> What is your particular role in the project?</li>
         <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
       <li> What have you done personally in the two weeks leading up to today?</li>
-        <ul><li> </li></ul>
+        <ul><li> In the past two weeks I had another meeting with the customer. The customer still needs the website up and running by the spring when he changes locations. I explained to the customer that I would have a working example for him before the new year so we can refine the site over the next few months. I also spent time enabling Entity Framework and learning the differences between EF6 and EF Core. I've connected the Database to the Web App and made several successful CRUD operations in testing.   </li></ul>
       <li> Describe any significant progress made by the team as a whole in this time period.</li>
-        <ul><li> </li></ul>
+        <ul><li> See above. </li></ul>
       <li> Give a link to the journal file in your repository</li>      
         <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
     </ul>
@@ -95,8 +95,8 @@
   
      <li>Progress Report Seven (12/8/2019)
     <ul>
-      <li> Briefly describe your project. (About 2 sentences.) </li>
-        <ul><li> </li></ul>
+       <li> Briefly describe your project. (About 2 sentences.) </li>
+        <ul><li>My project is a web site for a truck dealership in Fort Myers, Florida. The website will feature current inventory, contact information, and general financing information. The website will also feature a log in for the dealership so they can log in and update their inventory. </li></ul>
       <li> What is your particular role in the project?</li>
         <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
       <li> What have you done personally in the two weeks leading up to today?</li>

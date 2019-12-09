@@ -100,9 +100,9 @@
       <li> What is your particular role in the project?</li>
         <ul><li> I am the only member of my group so my role is all encompassing. </li></ul>
       <li> What have you done personally in the two weeks leading up to today?</li>
-        <ul><li> </li></ul>
+        <ul><li> In the past two weeks I've established and assigned roles for the site. I redid the image saving to Database so that is saves the files locally but saves the path to the database. I established the photo gallery for the detail page. </li></ul>
       <li> Describe any significant progress made by the team as a whole in this time period.</li>
-        <ul><li> </li></ul>
+        <ul><li> See above. </li></ul>
       <li> Give a link to the journal file in your repository</li>      
         <ul><li> https://github.com/trevorengstrom/SeniorProject/blob/master/README.md </li></ul>
     </ul>

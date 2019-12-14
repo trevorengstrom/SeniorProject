@@ -1,0 +1,87 @@
+﻿@model IEnumerable<TaMotors.Models.Photo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FrontOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FrontTwo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SideOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SideTwo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RearOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RearTwo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InteriorOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InteriorTwo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InteriorThree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inventory.Manufacturer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrontOne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FrontTwo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SideOne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SideTwo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RearOne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RearTwo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InteriorOne)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InteriorTwo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InteriorThree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inventory.Manufacturer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PhotoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PhotoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PhotoId })
+        </td>
+    </tr>
+}
+
+</table>

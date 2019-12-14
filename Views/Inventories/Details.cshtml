@@ -1,0 +1,125 @@
+﻿@model TaMotors.Models.InventoryPhotoViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<link rel="stylesheet" href="content/smoothbox.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="scripts/smoothbox.min.js"></script>
+
+
+
+<h2>Details</h2>
+
+<div>
+    <h4>Inventory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Miles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Miles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Transmission)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Transmission)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Engine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Engine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Fuel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Fuel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Body)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Body)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Description)
+        </dd>
+
+    </dl>
+</div>
+
+
+<div>
+    <ul id="mycarousel" class="">
+        @foreach (var photo in Model.Photo)
+        {
+            <li>
+                <img src='@photo.FilePath' />
+            </li>
+            <li>
+                @photo.FilePath
+            </li>
+            <li>
+                <a class="sb" href=@photo.FilePath title="caption">Image One</a>
+            </li>
+        }
+    </ul>
+
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Inventory.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

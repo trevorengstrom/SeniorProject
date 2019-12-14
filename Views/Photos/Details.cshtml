@@ -1,0 +1,98 @@
+﻿@model TaMotors.Models.Photo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Photo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FrontOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrontOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrontTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrontTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SideOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SideOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SideTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SideTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RearOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RearOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RearTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RearTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InteriorOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InteriorOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InteriorTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InteriorTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InteriorThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InteriorThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inventory.Manufacturer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PhotoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

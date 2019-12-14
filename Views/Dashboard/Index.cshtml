@@ -1,0 +1,260 @@
+﻿@model IEnumerable<TaMotors.Models.Inventory>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="~/Scripts/Jquery.ui.widget.js"></script>
+<script src="~/Scripts/jquery.fileupload.js"></script>
+<script src="~/Scripts/jquery.iframe-transport.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+
+
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+<style>
+    .bar {
+        height: 18px;
+        background: green;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1>Manager Dashboard</h1>
+    <p class="lead">Use this page to manage your inventory and photos</p>
+    <p><a href="http://localhost:55552/Home/" class="btn btn-primary btn-lg">View Website &raquo;</a></p>
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Inventory ID
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Miles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transmission)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Engine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fuel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Miles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transmission)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Engine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fuel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+    }
+
+</table>
+
+@*<div class="row">
+        @using (Html.BeginForm("FileUpload", "Home",
+                               FormMethod.Post,
+                               new
+                               {
+                                   @class = "dropzone",
+                                   id = "dropzone-form",
+                               }))
+        {
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+        }
+    </div>*@
+
+@*@section scripts {
+        @Scripts.Render("~/bundles/dropzone")
+
+        <script type="text/javascript">
+            Dropzone.options.dropzoneForm = {
+                paramName: "file",
+                maxFilesize: 20,
+                maxFiles: 4,
+                acceptedFiles: "image/*",
+                dictMaxFilesExceeded: "Custom max files msg",
+            };
+        </script>
+    }*@
+
+
+@using (Html.BeginForm("SaveUploadedFile", "Dashboard", FormMethod.Post, new { @name = "myDropzone", id = "myDropzone", @enctype = "multipart/form-data" }))
+{
+    <br />
+
+    <div>
+        <div id="previews" class="dz-default dz-message box__input dropzone">
+            <div style="text-align:center">
+                <i class="fa fa-cloud-upload" style="font-size:23px;position:relative;top:4px;"></i> <span style="margin-left:20px">Drop files  to attach or browse</span>
+            </div>
+        </div>
+        <div id="previewFiles"></div>
+    </div>
+    <br />
+    <div>
+        <label for="InventoryIdForPhoto">Inventory ID</label>
+        <input type="text" id="InventoryIdForPhoto" name="InventoryIdForPhoto" />
+        <br />
+        <input type="submit" id="Submit" name="Submit" class="btn btn-success m-t-5" value="Submit" />
+        <div id="the-progress-div">
+            <span class="the-progress-text"></span>
+        </div>
+    </div>
+}
+
+
+
+@section scripts{
+
+    <script>
+
+        $(document).ready(function () {
+            Dropzone.autoDiscover = false;
+            $('#myDropzone').dropzone({
+                //parameter name value
+                paramName: "files",
+                //clickable div id
+                clickable: '#previews',
+                //preview files container Id
+                previewsContainer: "#previewFiles",
+                autoProcessQueue: false,
+                uploadMultiple: true,
+                parallelUploads: 100,
+                maxFiles: 100,
+                url: "Dashboard/SaveUploadedFile", // url here to save file
+                maxFilesize: 100,//max file size in MB,
+                addRemoveLinks: true,
+                dictResponseError: 'Server not Configured',
+                acceptedFiles: ".png,.jpg,.gif,.bmp,.jpeg,.pdf",// use this to restrict file type
+                init: function () {
+                    var self = this;
+                    // config
+                    self.options.addRemoveLinks = true;
+                    self.options.dictRemoveFile = "Delete";
+                    //New file added
+                    self.on("addedfile", function (file) {
+                        console.log('new file added ', file);
+                        $('.dz-success-mark').hide();
+                        $('.dz-error-mark').hide();
+                    });
+                    // Send file starts
+                    self.on("sending", function (file, formData) {
+                        formData.inventoryId = $('#InventoryIdForPhoto').val();
+                        console.log('upload started', file);
+                        $('.meter').show();
+                    });
+
+                    // File upload Progress
+                    self.on("totaluploadprogress", function (progress) {
+                        console.log("progress ", progress);
+                        $("#the-progress-div").width(progress + '%');
+                        $(".the-progress-text").text(progress + '%');
+                    });
+
+                    self.on("queuecomplete", function (progress) {
+                        $('.the-progress-text').delay(999).slideUp(999);
+                    });
+
+                    // On removing file
+                    self.on("removedfile", function (file) {
+                        console.log(file);
+                    });
+
+                    $('#Submit').on("click", function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        // Validate form here if needed
+
+                        if (self.getQueuedFiles().length > 0) {
+                            self.processQueue();
+                            setTimeout(location.reload.bind(location), 1000);
+                        } else {
+                            self.uploadFiles([]);
+                            $('#myDropzone').submit();
+                            setTimeout(location.reload.bind(location), 1000);
+                        }
+                    });
+
+                    self.on("successmultiple", function (files, response) {
+                        // Gets triggered when the files have successfully been sent.
+                        // Redirect user or notify of success.
+
+                    });
+                }
+            });
+
+
+        })
+
+    </script>
+}
+
+@Styles.Render("~/Content/dropzone-css")
+
+@Styles.Render("~/Content/jQuery-File-Upload")
+
+@Scripts.Render("~/bundles/jQuery-File-Upload")

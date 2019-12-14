@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Todd Allan Motors</h1>
+    <p class="lead">The PREMIER commercial truck dealership on Florida's Gulf Coast.</p>
+    <p><a href='@Url.Action("Contact", "Home")' class="btn btn-primary btn-lg">Contact Us &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>View Our Inventory</h2>
+        <p>Todd Allan Motors stocks an assortment of commercial grade vechicles to boost your business' productivity and profitability.</p>
+        <p><a class="btn btn-default" href='@Url.Action("Index", "Inventories")'>View All Trucks &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Sell Your Truck</h2>
+        <p>Contact us to find the best way to sell or trade in your truck.  </p>
+        <p><a class="btn btn-default" href='@Url.Action("Contact", "Home")'>Sell &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Easy Financing</h2>
+        <p>We'll work with you to develop a headache-free plan to get you financed for your new truck.</p>
+        <p><a class="btn btn-default" href='@Url.Action("Finance", "Home")'>Learn more &raquo;</a></p>
+    </div>
+</div>

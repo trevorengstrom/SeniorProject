@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="jumbotron">
+    <h1>Manager Dashboard</h1>
+    <p class="lead">Use this page to manage your inventory and photos</p>
+    <p><a href="http://localhost:55552/Home/" class="btn btn-primary btn-lg">View Website &raquo;</a></p>
+</div>
+
+<div>
+    @Html.ActionLink("Inventory List", "Index", "Inventories")<br />
+    @Html.ActionLink("Photo List", "Index", "Photos")<br />
+</div>
+
+<div>
+    <input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="~/Scripts/Jquery.ui.widget.js"></script>
+    <script src="~/Scripts/jquery.fileupload.js"></script>
+    <script src="~/Scripts/jquery.iframe-transport.js"></script>
+
+    <script>
+        $(function () {
+            $('#fileupload').fileupload({
+                dataType: 'json',
+                done: function (e, data) {
+                    $.each(data.result.files, function (index, file) {
+                        $('<p/>').text(file.name).appendTo(document.body);
+                    });
+                }
+            });
+        });
+    </script>
+</div>
